@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,11 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
+  currentLanguage = 'en';
+  constructor(private translateService: TranslateService) {}
 
-  constructor() {}
-
+  changeLan(event: any) {
+    this.currentLanguage = event.detail.value;
+    this.translateService.setDefaultLang(this.currentLanguage);
+  }
 }

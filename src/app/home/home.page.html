@@ -1,20 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <p>Translate Demo</p>
+  <h6>Name : {{"FAMILY_DETAIL.NAME" | translate }}</h6>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="ion-padding">
+    <ion-button shape="round" fill="outline" (ionChange)="changeLan($event)">
+      <ion-select label="Change Language" placeholder=" ">
+        <ion-select-option value="en">English</ion-select-option>
+        <ion-select-option value="guj">Gujarati</ion-select-option>
+        <ion-select-option value="hin">Hindi</ion-select-option>
+      </ion-select>
+    </ion-button>
   </div>
 </ion-content>
